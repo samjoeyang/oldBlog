@@ -1,0 +1,28 @@
+---
+layout: post
+status: publish
+published: true
+title: iptables&nbsp;端口转发
+author:
+  display_name: Samjoe Yang
+  login: blogerlogin
+  email: youremail@example.com
+  url: http://needis.me
+author_login: blogerlogin
+author_email: youremail@example.com
+author_url: http://needis.me
+wordpress_id: 183
+wordpress_url: http://samjoeyang.wordpress.com/2010/11/16/iptables-%e7%ab%af%e5%8f%a3%e8%bd%ac%e5%8f%91
+date: '2010-11-16 12:43:00 +0800'
+date_gmt: '2010-11-16 04:43:00 +0800'
+categories:
+- LINUX
+tags:
+- Linux
+- 命令
+comments: []
+---
+<p><a href="http://code.sh/linux/iptables-%e7%ab%af%e5%8f%a3%e8%bd%ac%e5%8f%91/">iptables 端口转发</a>: "</p>
+<p>Johnmy  10:03:02</p>
+<p>把本机的8080端口转发到53端口规则怎么写啊？</p>
+<p><code>-A PREROUTING -i eth1 -p tcp -m tcp -d 121.192.19.137 --dport 8080 -j DNAT --to-destination 192.168.0.20:80</code></p>

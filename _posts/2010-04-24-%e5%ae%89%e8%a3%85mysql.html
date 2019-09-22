@@ -1,0 +1,44 @@
+---
+layout: post
+status: publish
+published: true
+title: 安装mysql
+author:
+  display_name: Samjoe Yang
+  login: blogerlogin
+  email: youremail@example.com
+  url: http://needis.me
+author_login: blogerlogin
+author_email: youremail@example.com
+author_url: http://needis.me
+wordpress_id: 112
+wordpress_url: http://samjoeyang.wordpress.com/2010/04/24/%e5%ae%89%e8%a3%85mysql
+date: '2010-04-24 15:39:00 +0800'
+date_gmt: '2010-04-24 07:39:00 +0800'
+categories:
+- LINUX
+- MySQL
+tags:
+- 数据库
+- MySQL
+- DataBase
+comments: []
+---
+<p>系统自动下载和安装Mysql的<br />
+yum -y install mysql-server</p>
+<p>在服务清单中添加mysql服务<br />
+chkconfig �add mysqld</p>
+<p>服务启动<br />
+service mysqld start</p>
+<p>更改密码<br />
+mysqladmin -u root password 'newpassword'</p>
+<p>登录mysql<br />
+mysql -u root -p</p>
+<p>删除test数据库<br />
+mysql> DROP DATABASE test;</p>
+<p>删除匿名帐户<br />
+mysql> DELETE FROM mysql.user WHERE user = ";</p>
+<p>重载权限<br />
+mysql> FLUSH PRIVILEGES;</p>
+<p>添加mysql用户：<br />
+GRANT ALL PRIVILEGES ON my_db.* TO 'user'@'localhost' IDENTIFIED BY 'password';</p>

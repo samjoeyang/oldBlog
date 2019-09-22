@@ -1,0 +1,43 @@
+---
+layout: post
+status: publish
+published: true
+title: 普通用户提升权限Root
+author:
+  display_name: Samjoe Yang
+  login: blogerlogin
+  email: youremail@example.com
+  url: http://needis.me
+author_login: blogerlogin
+author_email: youremail@example.com
+author_url: http://needis.me
+wordpress_id: 120
+wordpress_url: http://samjoeyang.wordpress.com/2010/07/09/%e6%99%ae%e9%80%9a%e7%94%a8%e6%88%b7%e6%8f%90%e5%8d%87%e6%9d%83%e9%99%90root
+date: '2010-07-09 15:27:00 +0800'
+date_gmt: '2010-07-09 07:27:00 +0800'
+categories:
+- LINUX
+tags:
+- Linux
+- 权限
+comments: []
+---
+<p>说法一<br />
+修改/etc/passwd即可，把用户名的ID和ID组修改成0。至于/etc/group是否修改，经过测试，不修改也行的，修改了也没问题</p>
+<p>说法二<br />
+以普通用户登陆系统，打开终端&amp; su -root<br />
+$cd /etc/pam.d<br />
+$vi gdm<br />
+将文件中下列一行：<br />
+auth required pam-succeed-if.so user !=root quiet<br />
+前面用#号注释掉。<br />
+然后添加以下一行<br />
+auth requred pam-succeed-if.so quiet<br />
+保存退出，重启系统就可以了。</p>
+<p>说法三<br />
+用root登陆<br />
+用usermod命令<br />
+usermod -g group G adm,root 你的用户名<br />
+就可以了</p>
+<p>说法四<br />
+用suid――我不懂这个的说</p>

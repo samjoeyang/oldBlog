@@ -1,0 +1,34 @@
+---
+layout: post
+status: publish
+published: true
+title: ubuntu开机加载脚本
+author:
+  display_name: Samjoe Yang
+  login: blogerlogin
+  email: youremail@example.com
+  url: http://needis.me
+author_login: blogerlogin
+author_email: youremail@example.com
+author_url: http://needis.me
+wordpress_id: 1638
+wordpress_url: http://needis.me/?p=1638
+date: '2013-09-27 21:14:20 +0800'
+date_gmt: '2013-09-27 13:14:20 +0800'
+categories:
+- NeedIsMe
+tags:
+- Ubuntu
+- 开机
+- 脚本
+- shell
+- sh
+- script
+comments: []
+---
+<p>1.编写要执行的脚本，例如shell.sh<br />
+2.保存在某个位置，例如/home/ubuntu<br />
+3.在终端输入：<code>sudo vi /etc/init.d/rc.local</code><br />
+4.进入编辑模式，在结尾处加入：<code>/home/ubuntu/shell.sh</code><br />
+5.退出编辑模式，输入<code>:wq</code>,保存退出</p>
+<p>即可开机自动加载脚本</p>

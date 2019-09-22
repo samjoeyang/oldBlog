@@ -1,0 +1,37 @@
+---
+layout: post
+status: publish
+published: true
+title: 把apache加入系统service，开机自启动
+author:
+  display_name: Samjoe Yang
+  login: blogerlogin
+  email: youremail@example.com
+  url: http://needis.me
+author_login: blogerlogin
+author_email: youremail@example.com
+author_url: http://needis.me
+wordpress_id: 5336
+wordpress_url: http://needis.me/?p=5336
+date: '2017-02-05 11:28:52 +0800'
+date_gmt: '2017-02-05 03:28:52 +0800'
+categories:
+- NeedIsMe
+tags:
+- 程序员
+- PHP
+- text
+comments: []
+---
+<p class="p1">sudo cp /usr/local/httpd/bin/apachectl /etc/init.d/httpd</p>
+<p class="p1">sudo</p>
+<p class="p1">vi /etc/init.d/httpd</p>
+<p class="p3">在文件开头加入下面几行：</p>
+<p class="p1">#!/bin/sh</p>
+<p class="p1"># chkconfig: 2345 85 15</p>
+<p class="p1"># description: Apache is a World Wide Web server.</p>
+<p class="p1">sudo chmod +x /etc/init.d/httpd</p>
+<p class="p1">sudo /sbin/chkconfig --add httpd</p>
+<p class="p1">sudo /sbin/chkconfig --list httpd</p>
+<p class="p1">sudo ln -s /sbin/chkconfig /usr/bin/chkconfig</p>
+<p class="p1">sudo ln -s /sbin/service /usr/bin/service</p>

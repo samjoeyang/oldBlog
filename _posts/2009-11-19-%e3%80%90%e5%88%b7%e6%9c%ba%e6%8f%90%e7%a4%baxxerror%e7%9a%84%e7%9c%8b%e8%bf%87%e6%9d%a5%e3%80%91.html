@@ -1,0 +1,56 @@
+---
+layout: post
+status: publish
+published: true
+title: "【刷机提示XXERROR的看过来】"
+author:
+  display_name: Samjoe Yang
+  login: blogerlogin
+  email: youremail@example.com
+  url: http://needis.me
+author_login: blogerlogin
+author_email: youremail@example.com
+author_url: http://needis.me
+wordpress_id: 101
+wordpress_url: http://samjoeyang.wordpress.com/2009/11/19/%e3%80%90%e5%88%b7%e6%9c%ba%e6%8f%90%e7%a4%baxxerror%e7%9a%84%e7%9c%8b%e8%bf%87%e6%9d%a5%e3%80%91
+date: '2009-11-19 16:58:00 +0800'
+date_gmt: '2009-11-19 08:58:00 +0800'
+categories:
+- Android
+tags:
+- Android
+- Recovery
+- 刷机
+comments: []
+---
+<p>有的小白刷机，一开始就显示什么sign XXX，或者这里哪里错误，这多半是RECOVERY的问题~所以说捏，要刷Recovery~<br />
+这里提供2种RECOVERY。。。大家自己选择<br />
+1号，这个我在用。。。有空我去刷2号。。。。。。。<br />
+（纯纯转载）<br />
+安装方法<br />
+1下载&nbsp;<a href="http://www.xinwenit.com/hi/recovery-RAv1.2.1G.img">www.xinwenit.com/hi/recovery-RAv1.2.1G.img</a><br />
+2放到SD卡根目录（不要改名，直接丢进去）<br />
+3打开终端输入<br />
+mount -o rw,remount -t yaffs2 /dev/block/mtdblock3 /system (回车)<br />
+cd sdcard (回车r)<br />
+flash_image recovery recovery-RAv1.2.1G.img (回车)<br />
+恩，就这么装<br />
+2号，这个我没在用。。。不过捏，我有空刷掉（MS国外网站提供的安装方法要先刷前面的。。。各位想用的刷刷）<br />
+首先下载这个<a href="http://www.rayfile.com/files/c28">http://www.rayfile.com/files/c28</a> ... -82b3-0014221b798a/<br />
+然后把下载下来的IMG文件原封不动放入TF卡根目录<br />
+然后按住HOME启动（小房子）<br />
+然后进入RECOVERY模式。。。。<br />
+然后选console（不清楚是不是只是一个单词，或者有什么ENTER之类的就是了）<br />
+然后输入：<br />
+$su<br />
+#mount -a<br />
+#flash_image recovery /sdcard/recovery-RA-dream-v1.2.3.img<br />
+（$,#是提示符）<br />
+注意啊，都要有ROOT权限才能刷。。。<br />
+然后就可以刷ROM了<br />
+<span class="Apple-style-span" style="font-family: Verdana, Helvetica, Arial, sans-serif; font-size: 14px; border-collapse: collapse; color: #444444; line-height: 22px;"><img src="http://i3.6.cn/cvbnm/9c/ce/69/2044f65140664fbafd8db037d9cb66b1.png" alt="" width="320" height="480" /> </span><br />
+（安卓。。。谢谢给图）<br />
+2号RECOVERY是这样的。。。<br />
+刷机按键没变ALT+S<br />
+最后说句，这是G1的。。。<br />
+结束。。。</p>
